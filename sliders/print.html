@@ -1,86 +1,116 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Nirit Nagar Portfolio | Print</title>
-		<meta name="description" content="Front-End Developer - Hands-on experience and knowledge in SEO, branding, responsive design, UX, animation, video editing, graphic design and web programming." />
-		<meta name="keywords" content="web design,web developer,seo,wordpress,website,application,animation,video,charecter design,web apps,pwa,github,git,web,developer,frontend,software,engineer,branding,graphic,css,html,js,javascript,digital,marketing,creative,art,design,responsive" />
-		<meta name="author" content="Nirit Nagar" />
-		<link rel="shortcut icon" href="../favicon.ico">
-		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.min.css" />
-		<link rel="stylesheet" type="text/css" href="css/demo.css" />
-		<link rel="stylesheet" type="text/css" href="css/mockup2.css" />
-		<link href="https://fonts.googleapis.com/css?family=Arsenal" rel="stylesheet">
-		<script src="js/modernizr.custom.js"></script>
-	</head>
-	<body class="demo-2 print-bg">
-		<div class="container">
-			<!-- Top Navigation -->
-			<div class="codrops-top clearfix">
-				<a class="print-btn" href="https://nirit.website"><i class="fa fa-angle-double-left"></i><span>Home</span></a>
-				<span class="right"><a class="web-btn" href="web.html"><span>Web</span><i class="fa fa-angle-double-right"></i></a></span>
-			</div>
-			<div id="wrap" class="wrap">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nirit Nagar Portfolio | Print</title>
+    <meta
+      name="description"
+      content="Front-End Developer - Hands-on experience and knowledge in SEO, branding, responsive design, UX, animation, video editing, graphic design and web programming."
+    />
+    <meta
+      name="keywords"
+      content="web design,web developer,seo,wordpress,website,application,animation,video,charecter design,web apps,pwa,github,git,web,developer,frontend,software,engineer,branding,graphic,css,html,js,javascript,digital,marketing,creative,art,design,responsive"
+    />
+    <meta name="author" content="Nirit Nagar" />
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../assets/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/mockup2.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Arsenal"
+      rel="stylesheet"
+    />
+    <script src="js/modernizr.custom.js"></script>
+  </head>
+  <body class="demo-2 print-bg">
+    <div class="container">
+      <!-- Top Navigation -->
+      <div class="codrops-top clearfix">
+        <a class="print-btn" href="../index.php"
+          ><i class="fa fa-angle-double-left"></i><span>Home</span></a
+        >
+        <span class="right"
+          ><a class="web-btn" href="web.html"
+            ><span>Web</span><i class="fa fa-angle-double-right"></i></a
+        ></span>
+      </div>
+      <div id="wrap" class="wrap">
+        <div class="mockup">
+          <img class="mockup__img" src="../images/print/mockup2.jpg" />
+          <div class="screen">
+            <div class="glass">
+              <img src="../images/print/large/glass.png" />
+            </div>
+            <ul id="slideshow" class="slideshow">
+              <li class="slideshow__item">
+                <img src="../images/print/large/1.jpg" />
+              </li>
+              <li class="slideshow__item">
+                <img src="../images/print/large/2.jpg" />
+              </li>
+              <li class="slideshow__item">
+                <img src="../images/print/large/3.jpg" />
+              </li>
+              <li class="slideshow__item">
+                <img src="../images/print/large/4.jpg" />
+              </li>
+              <li class="slideshow__item">
+                <img src="../images/print/large/5.jpg" />
+              </li>
+              <li class="slideshow__item">
+                <img src="../images/print/large/6.jpg" />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /container -->
+    <script src="js/classie.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      (function () {
+        new Slideshow(document.getElementById("slideshow"));
 
-				<div class="mockup">
-					<img class="mockup__img" src="../images/print/mockup2.jpg" />
-					<div class="screen">
-					<div class="glass"><img src="../images/print/large/glass.png"/></div>
-						<ul id="slideshow" class="slideshow">
-							<li class="slideshow__item"><img src="../images/print/large/1.jpg"/></li>
-							<li class="slideshow__item"><img src="../images/print/large/2.jpg"/></li>
-							<li class="slideshow__item"><img src="../images/print/large/3.jpg"/></li>
-							<li class="slideshow__item"><img src="../images/print/large/4.jpg"/></li>
-							<li class="slideshow__item"><img src="../images/print/large/5.jpg"/></li>
-							<li class="slideshow__item"><img src="../images/print/large/6.jpg"/></li>
-						</ul>
-					</div>
+        /* Mockup responsiveness */
+        var body = (docElem = window.document.documentElement),
+          wrap = document.getElementById("wrap"),
+          mockup = wrap.querySelector(".mockup"),
+          mockupWidth = mockup.offsetWidth;
 
-				</div>
-			</div>
+        scaleMockup();
 
-		</div><!-- /container -->
-		<script src="js/classie.js"></script>
-		<script src="js/main.js"></script>
-		<script>
-			(function() {
-				new Slideshow( document.getElementById( 'slideshow' ) );
+        function scaleMockup() {
+          var wrapWidth = wrap.offsetWidth,
+            val = wrapWidth / mockupWidth;
 
-				/* Mockup responsiveness */
-				var body = docElem = window.document.documentElement,
-					wrap = document.getElementById( 'wrap' ),
-					mockup = wrap.querySelector( '.mockup' ),
-					mockupWidth = mockup.offsetWidth;
+          mockup.style.transform = "scale3d(" + val + ", " + val + ", 1)";
+        }
 
-				scaleMockup();
+        window.addEventListener("resize", resizeHandler);
 
-				function scaleMockup() {
-					var wrapWidth = wrap.offsetWidth,
-						val = wrapWidth / mockupWidth;
+        function resizeHandler() {
+          function delayed() {
+            resize();
+            resizeTimeout = null;
+          }
+          if (typeof resizeTimeout != "undefined") {
+            clearTimeout(resizeTimeout);
+          }
+          resizeTimeout = setTimeout(delayed, 50);
+        }
 
-					mockup.style.transform = 'scale3d(' + val + ', ' + val + ', 1)';
-				}
-
-				window.addEventListener( 'resize', resizeHandler );
-
-				function resizeHandler() {
-					function delayed() {
-						resize();
-						resizeTimeout = null;
-					}
-					if ( typeof resizeTimeout != 'undefined' ) {
-						clearTimeout( resizeTimeout );
-					}
-					resizeTimeout = setTimeout( delayed, 50 );
-				}
-
-				function resize() {
-					scaleMockup();
-				}
-			})();
-		</script>
-	</body>
+        function resize() {
+          scaleMockup();
+        }
+      })();
+    </script>
+  </body>
 </html>

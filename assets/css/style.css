@@ -4162,6 +4162,12 @@ ul.feature-icons li:nth-child(2) {
 		padding: 0 2rem 2rem 2rem;
 	}
 
+	.gallery a.visual img {
+		height: 100vw !important;
+		object-fit: contain !important;
+	}
+
+
 }
 
 @media screen and (max-width: 360px) {

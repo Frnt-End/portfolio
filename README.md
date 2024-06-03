@@ -42,4 +42,4 @@ Marketing, Leadership, Management, Agile Methodology, Branding, Strategic Thinki
 
 ### Don't hesitate to Keep in touch:
 
-**_[My LinkedIn](https://www.linkedin.com/in/niritn/)_**
+**_[My LinkedIn](https://www.linkedin.com/in/nirit-nagar/)_**

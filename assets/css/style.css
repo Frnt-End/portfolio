@@ -571,7 +571,7 @@ h6 {
 @media screen and (max-width: 736px) {
 
 	h1 {
-		font-size: 4.5rem;
+		font-size: 4rem;
 		line-height: 1.1;
 	}
 
@@ -3661,7 +3661,6 @@ ul.feature-icons li:nth-child(2) {
 	font-family: inherit;
 	font-size: 1rem;
 	letter-spacing: 0.02em;
-	text-transform: uppercase;
 	font-weight: 400;
 	margin: 0;
 	line-height: 1.2em;

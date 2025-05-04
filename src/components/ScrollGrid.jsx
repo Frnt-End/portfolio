@@ -144,7 +144,7 @@ function ScrollGrid() {
   return (
     <section
       ref={gridContainerRef}
-      className="grid-section bg-white relative w-screen h-[2200px] max-sm:h-[3000px] overflow-hidden"
+      className="grid-section bg-white relative w-screen h-[2200px] max-sm:h-[3200px] overflow-hidden"
     >
       {images.map((img, index) => {
         const mobileStyleOverrides = isMobile

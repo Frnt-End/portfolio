@@ -200,10 +200,7 @@ function ScrollGrid() {
             }
           : {};
 
-        const combinedStyle = {
-          ...img.style,
-          ...mobileStyleOverrides
-        };
+        const combinedStyle = isMobile ? mobileStyleOverrides : img.style;
 
         return (
           <img

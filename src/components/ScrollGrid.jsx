@@ -118,6 +118,7 @@ function ScrollGrid() {
   }, []);
 
   useEffect(() => {
+    if (isMobile) return;
     const ctx = gsap.context(() => {
       const imgs = document.querySelectorAll("img[alt^='img-']");
       imgs.forEach((img) => {
@@ -138,7 +139,7 @@ function ScrollGrid() {
     }, gridContainerRef);
 
     return () => ctx.revert();
-  }, []);
+  }, [isMobile]);
 
   return (
     <section
@@ -151,49 +152,56 @@ function ScrollGrid() {
               ...(index === 0 && {
                 top: "5%",
                 left: "auto",
+                transform: "translateX(-50%)",
                 width: "97vw",
                 height: "auto"
               }),
               ...(index === 1 && {
                 top: "16%",
                 left: "auto",
+                transform: "translateX(-50%)",
                 width: "97vw",
                 height: "auto"
               }),
               ...(index === 2 && {
                 top: "30%",
                 right: "auto",
+                transform: "translateX(-50%)",
                 width: "97vw",
                 height: "auto"
               }),
               ...(index === 3 && {
                 top: "45%",
                 right: "auto",
+                transform: "translateX(-50%)",
                 width: "97vw",
                 height: "auto"
               }),
               ...(index === 4 && {
                 top: "55%",
                 left: "auto",
+                transform: "translateX(-50%)",
                 width: "97vw",
                 height: "auto"
               }),
               ...(index === 5 && {
                 top: "64%",
                 left: "auto",
+                transform: "translateX(-50%)",
                 width: "97vw",
                 height: "auto"
               }),
               ...(index === 6 && {
                 top: "73%",
                 right: "auto",
+                transform: "translateX(-50%)",
                 width: "97vw",
                 height: "auto"
               }),
               ...(index === 7 && {
                 top: "89%",
                 rigth: "auto",
-                bottom: "auto",
+                transform: "translateX(-50%)",
                 width: "97vw",
                 height: "auto"
               })

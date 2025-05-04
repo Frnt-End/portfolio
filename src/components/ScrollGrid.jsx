@@ -150,51 +150,59 @@ function ScrollGrid() {
           ? {
               ...(index === 0 && {
                 top: "5%",
-                left: "10%",
-                width: "400px",
-                height: "400px"
+                left: "50%",
+                transform: "translateX(-50%)",
+                width: "80vw",
+                height: "auto"
               }),
               ...(index === 1 && {
                 top: "16%",
-                left: "2%",
-                width: "400px",
-                height: "400px"
+                left: "50%",
+                transform: "translateX(-50%)",
+                width: "80vw",
+                height: "auto"
               }),
               ...(index === 2 && {
                 top: "30%",
-                right: "5%",
-                width: "360px",
-                height: "270px"
+                left: "50%",
+                transform: "translateX(-50%)",
+                width: "80vw",
+                height: "auto"
               }),
               ...(index === 3 && {
                 top: "45%",
-                right: "5%",
-                width: "400px",
-                height: "400px"
+                left: "50%",
+                transform: "translateX(-50%)",
+                width: "80vw",
+                height: "auto"
               }),
               ...(index === 4 && {
                 top: "55%",
-                left: "0%",
-                width: "400px",
-                height: "400px"
+                left: "50%",
+                transform: "translateX(-50%)",
+                width: "80vw",
+                height: "auto"
               }),
               ...(index === 5 && {
-                top: "87%",
-                left: "5%",
-                width: "450px",
-                height: "450px"
+                top: "64%",
+                left: "50%",
+                transform: "translateX(-50%)",
+                width: "80vw",
+                height: "auto"
               }),
               ...(index === 6 && {
-                top: "64%",
-                right: "10%",
-                width: "300px",
-                height: "600px"
+                top: "79%",
+                left: "50%",
+                transform: "translateX(-50%)",
+                width: "80vw",
+                height: "auto"
               }),
               ...(index === 7 && {
-                top: "79%",
-                left: "1%",
-                width: "400px",
-                height: "400px"
+                top: "87%",
+                left: "50%",
+                transform: "translateX(-50%)",
+                width: "80vw",
+                height: "auto"
               })
             }
           : {};

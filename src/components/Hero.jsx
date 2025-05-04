@@ -130,15 +130,15 @@ const Hero = () => {
               aria-label="Send email"
               role="button"
             >
-              <span className="mr-1 size-[40px] pl-2 sm:pl-0 mt-0 relative">
+              <span className="mr-1 size-[40px] pl-2 sm:pl-0 mt-0 2xl:mt-1 relative">
                 <Mail
-                  className={`${mailIconClass} size-[28px] sm:size-[34px] absolute top-1/2 transform -translate-y-1/2 transition-opacity duration-500`}
+                  className={`${mailIconClass} size-[28px] sm:size-[34px] 2xl:size-[30px] absolute top-1/2 transform -translate-y-1/2 transition-opacity duration-500`}
                 />
                 <MailOpen
-                  className={`${mailOpenIconClass} size-[28px] sm:size-[34px] absolute left top-1/2 transform -translate-y-1/2 transition-opacity duration-500`}
+                  className={`${mailOpenIconClass} size-[28px] sm:size-[34px] 2xl:size-[30px] absolute left top-1/2 transform -translate-y-1/2 transition-opacity duration-500`}
                 />
               </span>
-              <span className="text-white text-[7vw] sm:text-[2vw] transition-opacity duration-500">
+              <span className="text-white text-[7vw] sm:text-[2vw] 2xl:text-[1.6vw] transition-opacity duration-500">
                 Let's connect
                 <span
                   className={`${textClass} transition-opacity duration-500`}

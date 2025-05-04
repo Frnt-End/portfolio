@@ -144,7 +144,7 @@ function ScrollGrid() {
   return (
     <section
       ref={gridContainerRef}
-      className="grid-section bg-white relative w-screen h-[2200px] max-sm:h-[3400px] overflow-hidden"
+      className="grid-section bg-white relative w-screen h-[2200px] max-sm:h-[3000px] overflow-hidden"
     >
       {images.map((img, index) => {
         const mobileStyleOverrides = isMobile
@@ -199,11 +199,7 @@ function ScrollGrid() {
                 height: "auto"
               }),
               ...(index === 7 && {
-                top: "89%",
-                rigth: "auto",
-                transform: "translateX(-50%)",
-                width: "97vw",
-                height: "auto"
+                display: "none"
               })
             }
           : {};

@@ -1,6 +1,6 @@
 ![Creative & Code](https://i.ibb.co/23ZP8QRN/prev.jpg)
 
-### Check out My 👉 [portfolio](https://portfolio-tawny-omega-55.vercel.app/)
+### Check out My 👉 [portfolio](https://creatdev-portfolio.netlify.app/))
 
 ### A little bit more..
 

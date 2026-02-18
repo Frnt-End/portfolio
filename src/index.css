@@ -1,6 +1,5 @@
 @import url("https://fonts.cdnfonts.com/css/general-sans");
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Caveat:wght@400;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -60,8 +59,7 @@ body {
   font-display: swap;
 }
 
-@layer utilities {
-}
+@layer utilities {}
 
 /* From Uiverse.io by G4b413l */
 /* https://uiverse.io/G4b413l/tidy-walrus-92 */
@@ -116,8 +114,7 @@ body {
 .three-body__dot:nth-child(2)::after {
   bottom: 0;
   left: 0;
-  animation: wobble1 var(--uib-speed) infinite calc(var(--uib-speed) * -0.15)
-    ease-in-out;
+  animation: wobble1 var(--uib-speed) infinite calc(var(--uib-speed) * -0.15) ease-in-out;
 }
 
 .three-body__dot:nth-child(3) {
@@ -143,6 +140,7 @@ body {
 }
 
 @keyframes wobble1 {
+
   0%,
   100% {
     transform: translateY(0%) scale(1);
@@ -156,6 +154,7 @@ body {
 }
 
 @keyframes wobble2 {
+
   0%,
   100% {
     transform: translateY(0%) scale(1);
@@ -174,10 +173,12 @@ input[type="range"]::-webkit-slider-thumb {
   width: 0;
   height: 0;
 }
+
 input[type="range"]::-moz-range-thumb {
   width: 0;
   height: 0;
 }
+
 input[type="range"]::-ms-thumb {
   width: 0;
   height: 0;
@@ -187,6 +188,7 @@ input[type="range"]::-webkit-slider-runnable-track {
   height: 100%;
   background: transparent;
 }
+
 input[type="range"]::-moz-range-track {
   height: 100%;
   background: transparent;
@@ -195,4 +197,21 @@ input[type="range"]::-moz-range-track {
 .bg-anime {
   overflow: hidden;
   will-change: width, height, top, left, transform, border-radius;
+}
+
+.image-text {
+  font-size: 4vw;
+  font-weight: bold;
+  color: rgb(24, 24, 24);
+  font-family: "Caveat", cursive;
+  z-index: 99;
+  pointer-events: none;
+  position: absolute;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .image-text {
+    font-size: 2vw;
+  }
 }

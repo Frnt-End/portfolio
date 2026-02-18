@@ -54,7 +54,7 @@ const ProjectsSlider = () => {
     {
       backgroundColor: "#fff",
       image: "",
-      title: "It's UX :)",
+      title: "It's about us :)",
       subtitle: ""
     }
   ];

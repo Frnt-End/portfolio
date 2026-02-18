@@ -68,7 +68,6 @@ function App() {
         <GlobalSliderBox />
         <Hero />
         <About />
-
         <ProjectsSlider />
         <Breakdown />
         <Upgrade />

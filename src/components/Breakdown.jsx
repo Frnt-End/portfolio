@@ -312,7 +312,7 @@ const Breakdown = () => {
     >
       <div className="z-10 w-full pb-18 pt-24 px-2 text-2xl font-light leading-relaxed sm:text-3xl lg:text-4xl">
         <div className="headline">
-          <div className="p-9 ux-line font-bold font-fancy text-black text-[14vw] sm:text-[6vw] h-auto leading-[10vh]">
+          <div className="p-9 ux-line font-bold font-fancy text-black text-[14vw] sm:text-[5.2vw] h-auto leading-[10vh]">
             Let's unpack this project..
           </div>
           <div
@@ -321,7 +321,7 @@ const Breakdown = () => {
           ></div>
 
           <div className="ux-line pl-8 pt-8 pb-[9rem] mb-8">
-            <p className="text-[5vw] sm:text-[1.8vw] text-black/80 max-w-4xl">
+            <p className="text-[5vw] sm:text-[1.8vw] text-black/80 max-w-3xl">
               A comprehensive walkthrough of the complete UX lifecycle process
               from initial research to continuous iteration, showcasing
               methodologies, deliverables, and measurable impact.

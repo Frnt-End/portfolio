@@ -329,50 +329,53 @@ const Breakdown = () => {
           </div>
         </div>
 
-        <div
-          ref={navWrapperRef}
-          className="nav-wrapper mb-12"
-          style={{ paddingTop: "160px" }}
-        >
+        <div ref={navWrapperRef} className="nav-wrapper mb-12">
+          {isNavSticky && (
+            <div style={{ height: navRef.current?.offsetHeight || 80 }} />
+          )}
           <div
+            ref={navRef}
+            className="z-50 py-6 transition-all duration-300"
             style={{
-              paddingTop: isNavSticky
-                ? `${navRef.current?.offsetHeight || 80}px`
-                : "0"
+              backdropFilter: "blur(12px)",
+              WebkitBackdropFilter: "blur(12px)",
+              background: "rgba(255, 255, 255, 0.85)",
+              opacity: isNavVisible ? 1 : 0,
+              pointerEvents: isNavVisible ? "auto" : "none",
+              position: isNavSticky ? "fixed" : "relative",
+              top: isNavSticky ? 0 : "auto",
+              left: 0,
+              right: 0,
+              width: "75%"
             }}
           >
-            <div
-              ref={navRef}
-              className={`${isNavSticky ? "fixed top-0 left-0 right-0" : "relative w-full"} z-50 py-6 transition-opacity duration-300`}
-              style={{
-                backdropFilter: "blur(12px)",
-                WebkitBackdropFilter: "blur(12px)",
-                background: "rgba(255, 255, 255, 0.85)",
-                opacity: isNavVisible ? 1 : 0,
-                pointerEvents: isNavVisible ? "auto" : "none"
-              }}
-            >
-              <div className="flex flex-wrap gap-4 px-8 justify-start">
-                {phases.map((phase) => (
-                  <button
-                    key={phase.id}
-                    onClick={() => scrollToPhase(phase.id)}
-                    disabled={activePhase === phase.id}
-                    className="flex items-center gap-2 px-6 py-3 rounded-full border-2 transition-all duration-300 hover:scale-105 disabled:cursor-not-allowed disabled:opacity-60 disabled:scale-100 disabled:hover:scale-100"
-                    style={{
-                      borderColor: textColor,
-                      background:
-                        activePhase === phase.id ? textColor : "transparent",
-                      color: activePhase === phase.id ? "#fff" : "#000"
-                    }}
-                  >
-                    <phase.icon size={20} />
-                    <span className="font-semibold text-base sm:text-lg">
-                      {phase.title}
-                    </span>
-                  </button>
-                ))}
-              </div>
+            <div className="flex gap-[1%] px-8 justify-start">
+              {phases.map((phase) => (
+                <button
+                  key={phase.id}
+                  onClick={() => scrollToPhase(phase.id)}
+                  disabled={activePhase === phase.id}
+                  className="flex items-center justify-center gap-2 py-3 rounded-full border-2 transition-all duration-300 hover:scale-105 disabled:!cursor-pointer disabled:scale-100 disabled:hover:scale-100 disabled:hover:!cursor-pointer whitespace-nowrap"
+                  style={{
+                    borderColor: textColor,
+                    background:
+                      activePhase === phase.id ? textColor : "transparent",
+                    color: activePhase === phase.id ? "#fff" : "#000",
+                    flex: "1 1 0",
+                    minWidth: "0",
+                    padding: "0.55rem clamp(0.3rem, 1.2vw, 1.2rem)",
+                    fontSize: "clamp(0.75rem, 1.2vw, 1.125rem)",
+                    ...(activePhase === phase.id
+                      ? { cursor: "pointer !important" }
+                      : {})
+                  }}
+                >
+                  <phase.icon size={20} style={{ flexShrink: 0 }} />
+                  <span className="font-semibold overflow-hidden text-ellipsis">
+                    {phase.title}
+                  </span>
+                </button>
+              ))}
             </div>
           </div>
         </div>

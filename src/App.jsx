@@ -69,8 +69,9 @@ function App() {
         <Hero />
         <About />
         <ProjectsSlider />
-        <Breakdown />
         <Upgrade />
+        <Breakdown />
+
         <ScrollGrid />
         <Footer />
       </main>

@@ -51,7 +51,11 @@ const GlobalSliderBox = () => {
         borderRadius: "1rem",
         padding: "1.5rem 0 1.5rem 1.25rem",
         duration: 0.6,
-        ease: "power2.inOut"
+        ease: "power2.inOut",
+        onComplete: () => {
+          // Force ColorSlider recalculation after expand animation
+          window.dispatchEvent(new Event("resize"));
+        }
       });
       gsap.to(content, {
         opacity: 1,
@@ -151,7 +155,7 @@ const GlobalSliderBox = () => {
                 value={value}
                 onChange={onChange}
                 min={0}
-                max={key === "H" ? 360 : 100} // Saturation value 0-360
+                max={key === "H" ? 360 : 100}
                 hue={hue}
                 saturation={saturation}
                 brightness={brightness}

@@ -3,6 +3,7 @@ import { SliderProvider } from "./context/SliderContext";
 import Lenis from "@studio-freight/lenis";
 import About from "./components/About";
 import Breakdown from "./components/Breakdown";
+//import BreakdownMobile from "./components/BreakdownMobile";
 import ProjectsSlider from "./components/ProjectsSlider";
 import GlobalSliderBox from "./components/GlobalSliderBox";
 import Hero from "./components/Hero";
@@ -71,6 +72,7 @@ function App() {
         <ProjectsSlider />
         <Upgrade />
         <Breakdown />
+        {/* <BreakdownMobile />*/}
 
         <ScrollGrid />
         <Footer />

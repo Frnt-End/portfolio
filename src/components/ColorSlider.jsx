@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 
 const ColorSlider = ({
   mode,
@@ -13,17 +13,31 @@ const ColorSlider = ({
   const trackRef = useRef(null);
   const [trackWidth, setTrackWidth] = useState(0);
 
-  useEffect(() => {
-    const updateTrackWidth = () => {
-      if (trackRef.current) {
-        setTrackWidth(trackRef.current.offsetWidth);
-      }
-    };
-
-    updateTrackWidth();
-    window.addEventListener("resize", updateTrackWidth);
-    return () => window.removeEventListener("resize", updateTrackWidth);
+  const updateTrackWidth = useCallback(() => {
+    if (trackRef.current) {
+      setTrackWidth(trackRef.current.offsetWidth);
+    }
   }, []);
+
+  useEffect(() => {
+    updateTrackWidth();
+
+    // Use ResizeObserver to detect when slider becomes visible
+    const resizeObserver = new ResizeObserver(() => {
+      updateTrackWidth();
+    });
+
+    if (trackRef.current) {
+      resizeObserver.observe(trackRef.current);
+    }
+
+    window.addEventListener("resize", updateTrackWidth);
+
+    return () => {
+      window.removeEventListener("resize", updateTrackWidth);
+      resizeObserver.disconnect();
+    };
+  }, [updateTrackWidth]);
 
   const percent = (value - min) / (max - min);
   const pixelLeft = percent * trackWidth;

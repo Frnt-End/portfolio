@@ -4,11 +4,20 @@
 @tailwind components;
 @tailwind utilities;
 
+
 body {
   width: 100dvw;
   overflow-x: hidden;
   background-color: #fff;
   font-family: "General Sans", sans-serif;
+  opacity: 0;
+  transition: opacity 0.1s ease-in;
+}
+
+
+body.loaded {
+  opacity: 1 !important;
+  transition: opacity 0.1s ease-in;
 }
 
 @font-face {

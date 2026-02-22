@@ -329,7 +329,7 @@ const Breakdown = () => {
           </div>
         </div>
 
-        <div ref={navWrapperRef} className="nav-wrapper mb-12">
+        <div ref={navWrapperRef} className="nav-wrapper mb-12 hidden md:block">
           {isNavSticky && (
             <div style={{ height: navRef.current?.offsetHeight || 80 }} />
           )}
